@@ -21,7 +21,7 @@ function Popular() {
     <div>
       {popular.map((recipe) => {
         return(
-         <div> 
+         <div key={recipe.id}> 
            <p>{recipe.title}</p>
          </div> 
       
