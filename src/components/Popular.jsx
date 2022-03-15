@@ -16,30 +16,28 @@ function Popular() {
     );
     const data = await api.json();
     setPopular(data.recipes);
-    //  console.log(data)
+    console.log(data)
   };
 
   return (
     <div>
+      
+      <Wrapper>
+        <h3>Popular Picks</h3>
+        <Splide>
+          {popular.map((recipe) => {
+            return (
+              <SplideSlide>
+                <Card>
+                  <p>{recipe.title}</p>
+                  <img src={recipe.image} alt={recipe.title} />
+                </Card>
+              </SplideSlide>
+            );
+          })}
+        </Splide>
+      </Wrapper>
      
-        return (
-          <Wrapper>
-            <h3>Popular Picks</h3>
-            <Splide>
-            {popular.map((recipe) => {
-                return (
-                  <SplideSlide>
-                    <Card>
-                      <p key={recipe.id}>{recipe.title}</p>
-                      <img src={recipe.image} alt={recipe.title} />
-                    </Card>
-                  </SplideSlide>
-                );
-              })}
-            </Splide>
-          </Wrapper>
-        );
-    
     </div>
   );
 }
