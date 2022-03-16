@@ -4,12 +4,21 @@ import {FaSearch} from 'react-icons/fa'
 
 
 function Search() {
+
+  const [input, setInput] = useState(' ');
+
+  const submitHandler = (event) =>{
+    event.preventDefault(); 
+    console.log("bing bong")
+    console.log({input})
+  };
+
   return (
-    <FormStyle>
+    <FormStyle onSubmit={submitHandler}>
       <div>
         <FaSearch></FaSearch>
-      <input type='text' />
-
+      <input type='text' onChange={(e) => setInput(e.target.value)}/>
+      {/* <h1>{input}</h1> */}
       </div>
     </FormStyle>
   )
