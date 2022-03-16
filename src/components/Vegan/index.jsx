@@ -5,7 +5,7 @@ import {
   Wrapper,
   Card,
   Gradient
-} from './veggieElements'
+} from './VeganElements'
 
 
 function Veggie() {
