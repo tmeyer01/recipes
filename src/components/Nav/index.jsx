@@ -8,7 +8,7 @@ const Nav = () => {
     <Wrapper>
       <Logo to={'/'}>
       <GiKnifeFork />
-      Vegan Meal Ideas
+      <p>Vegan Meal Ideas</p>
       </Logo>
     </Wrapper>
   )
@@ -18,11 +18,17 @@ const Logo = styled(Link)`
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 400;
-  font-family: 'Lobster Two', cursive;
+  display: flex;
+  flex-direction: row;
+  p{
+    font-family: 'Lobster Two', cursive;
+
+  }
 `
 const Wrapper = styled.nav`
   padding: 1rem 0rem;
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 
